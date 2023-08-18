@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Blog</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>My Blog</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="blog-posts">
+            <article class="blog-post">
+                <h2 class="post-title">Sample Blog Post</h2>
+                <p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <a href="#" class="read-more">Read more</a>
+                
+            </article>
+            <!-- More blog posts go here -->
+        </section>
+        <section class="blog-posts">
+            <article class="blog-post">
+                <h2 class="post-title">Sample Blog Post</h2>
+                <p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <a href="#" class="read-more">Read more</a>
+                
+            </article>
+            <!-- More blog posts go here -->
+        </section><section class="blog-posts">
+            <article class="blog-post">
+                <h2 class="post-title">Sample Blog Post</h2>
+                <p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <a href="#" class="read-more">Read more</a>
+                
+            </article>
+            <!-- More blog posts go here -->
+        </section><section class="blog-posts">
+            <article class="blog-post">
+                <h2 class="post-title">Sample Blog Post</h2>
+                <p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <a href="#" class="read-more">Read more</a>
+                
+            </article>
+            <!-- More blog posts go here -->
+        </section><section class="blog-posts">
+            <article class="blog-post">
+                <h2 class="post-title">Sample Blog Post</h2>
+                <p class="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                <a href="#" class="read-more">Read more</a>
+                
+            </article>
+            <!-- More blog posts go here -->
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 My Blog</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    <script>
+        // Get all the "Read more" links
+const readMoreLinks = document.querySelectorAll('.read-more');
+
+// Attach click event listeners to each link
+readMoreLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+        const postContent = this.parentElement.querySelector('.post-content');
+        postContent.classList.toggle('expanded');
+        
+        if (postContent.classList.contains('expanded')) {
+            this.textContent = 'Read less';
+        } else {
+            this.textContent = 'Read more';
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
